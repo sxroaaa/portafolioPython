@@ -1,12 +1,56 @@
-Hombre=0
-Mujer=0
-for i in range(1, 11, 1):
-    genero=input('Escriba el genero con el que se identifica:')
+from random import randint
 
-    if genero=='mujer' or genero==Mujer:
-        Mujer=Mujer+1
-    if genero=='hombre' or genero==Hombre:
-        Hombre=Hombre+1
-    else:
-        ('Ninguno de los dos')
-print(f'el total de mujeres son {Mujer} y el total de hombres son {Hombre}')
+agregar='si'
+compra=0
+'''1. bola azul 2.bola blanca 3. bola blanca 4.bola roja'''
+print('Supermercado Noe')
+
+while agregar=='si' or agregar == 'SI':
+
+    cantidad=int(input('ingrese la cantidad de productos adquiridos:'))
+    precio=(int(input('ingrese el precio de los productos:')))
+    subtotal=cantidad*precio
+    compra+=subtotal
+    if subtotal>=0:
+        agregar=input("¿desea ingresar otro gasto?")
+        
+else:
+    if compra >50000:
+            print('felicidades puede acceder al descuento')
+            descuento=randint(1, 4)
+            input('Elija un numero entre el 1 y 4:')
+            if descuento==1:
+                opcion1= 1-(30/100)*(compra)
+                print('Felicidades, tiene un 30% de descuento en su compra')
+                totalpaga= compra-descuento                        
+                print(f"su valor total a pagar es{totalpaga}")
+                pago =int(input(f"ingrese el valor con el que cancela:"))                
+                cambio=pago-totalpaga
+                print(f'su cambio es de {cambio}')
+
+            elif descuento==2:
+                print('Hoy es tu dia de suerte, te llevas tu compra totalmente gratis')
+                totalpaga= compra-descuento                        
+                print(f"su valor total a pagar es {totalpaga}")
+                pago =int(input(f"ingrese el valor con el que cancela:"))                
+                cambio=pago-totalpaga
+                print(f'su cambio es de {cambio}')
+
+            elif descuento==3:
+                opcion3=1-(50/100)*(compra)
+                print('felicidades, tiene un descuento de 50% de descuento en su compra ')
+                totalpaga= compra-descuento                        
+                print(f"su valor total a pagar es{totalpaga}")
+                pago =int(input(f"ingrese el valor con el que cancela:"))                
+                cambio=pago-totalpaga
+                print(f'su cambio es de {cambio}')
+
+            elif descuento==4:
+                opcion4=1-(10/100)*(compra)
+                print('Felicidades, tiene un 10% de descuento en su compra')
+                totalpaga= compra-descuento                        
+                print("su valor total a pagar es{totalpaga}")
+                pago =int(input(f"ingrese el valor con el que cancela:"))                
+                cambio=pago-totalpaga
+                print(f'su cambio es de {cambio}')
+

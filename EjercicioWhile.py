@@ -8,7 +8,7 @@ while repetir == 's' or repetir == 'S':
     plata=int (input('ingrese el valor a ahorrar:'))
     alcancia=alcancia+plata
     if alcancia<=100000:
-        repetir=input('desear ingresar mas dinero s o n para salir:')
+        repetir=input('desea ingresar mas dinero s o n para salir:')
     else:
         break
 

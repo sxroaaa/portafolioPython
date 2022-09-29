@@ -1,16 +1,16 @@
 from random import randint, random
 
 moneda=randint (1, 2)
-
-if moneda==1:
-   resultado='cara'
-if moneda==2:
-    resultado='sello'
-  
+print("1.cara")
+print("2.sello")
 eleccion= input ("elije cara o sello:")
 
-if eleccion == resultado: 
+
+if moneda == eleccion: 
     print("Ganaste")
 
-else:
+elif moneda!=eleccion:
     print('perdiste, sigue intentando')
+
+else:
+    print("caracteres no permitidos")

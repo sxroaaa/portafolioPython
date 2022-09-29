@@ -2,7 +2,7 @@ total=0
 minutos=0
 for i in range(1, 4, 1):
     precio=int(input('ingrese valor del producto:'))
-    cantidad=int(input('ingrese la cantidad de productos_:'))
+    cantidad=int(input('ingrese la cantidad de productos:'))
     subtotal=precio*cantidad
     total=total+subtotal
     minutos=minutos+1
